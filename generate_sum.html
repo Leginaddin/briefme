@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Dewi Bootstrap Template - Index</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="/static/assets_dewi/img/favicon.png" rel="icon">
+    <link href="/static/assets_dewi/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="/static/assets_dewi/vendor/aos/aos.css" rel="stylesheet">
+    <link href="/static/assets_dewi/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/assets_dewi/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/static/assets_dewi/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/static/assets_dewi/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/static/assets_dewi/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="/static/assets_dewi/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="/static/assets_dewi/css/style.css" rel="stylesheet">
+
+    <!-- =======================================================
+    * Template Name: Dewi
+    * Updated: Jul 27 2023 with Bootstrap v5.3.1
+    * Template URL: https://bootstrapmade.com/dewi-free-multi-purpose-html-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+
+<body>
+<!-- ======= Header ======= -->
+    <header id="header" class="fixed-top header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-between">
+
+        <h1 class="logo"><a href="/">BriefMe</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="logo"><img src="/static/assets_dewi/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="getstarted scrollto active" href="/briefme">Back</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Header -->
+
+    <main id="main">
+        <section id="breadcrumbs" class="breadcrumbs"></section>
+        <section id="generate_sum" class="services section-bg">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Results</h2>
+                    <p>Headlines</p>
+                </div>
+
+                <div class="row" data-aos="fade-up" data-aos-delay="200">
+                    {% if results %}
+                        {% for item in results %}
+                            <div class="col-md-12 {{ ' ' if loop.index==1 else 'mt-4 mt-md-0' }}">
+                                {% set clean_title = item[0] | replace("'", "") %}
+                                {% set clean_summary = item[2] | replace("'", "") %}
+                                <div class="icon-box">
+                                    <i class="bi bi-play-btn btn-dark" onclick="play_news_summary('{{clean_title}}. {{clean_summary}}');"></i>
+                                    <!-- <a onclick="play_news_summary('{{clean_title}}. {{clean_summary}}');" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i></a>
+                                    -->
+                                    <h4><a href="#">{{item[0]}}</a></h4>
+                                    <p><img src="{{item[3]}}" height="auto" width="50%"></p>
+                                    <p>{{item[2]}}</p>
+                                    <p><b>Read the full article:</b></p>
+                                    <p><a href="{{item[1]}}" target="_blank">{{item[1]}}</a></p>
+
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <p>No results found</p>
+                    {% endif %}
+                </div>
+
+            </div>
+        </section><!-- End Services Section -->
+
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-info">
+                            <h3>Dewi</h3>
+                            <p>
+                                A108 Adam Street <br>
+                                NY 535022, USA<br><br>
+                                <strong>Phone:</strong> +1 5589 55488 55<br>
+                                <strong>Email:</strong> info@example.com<br>
+                            </p>
+                            <div class="social-links mt-3">
+                                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Our Services</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-newsletter">
+                        <h4>Our Newsletter</h4>
+                        <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+                        <form action="" method="post">
+                            <input type="email" name="email"><input type="submit" value="Subscribe">
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Dewi</span></strong>. All Rights Reserved
+            </div>
+
+        </div>
+    </footer><!-- End Footer -->
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="/static/assets_dewi/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="/static/assets_dewi/vendor/aos/aos.js"></script>
+    <script src="/static/assets_dewi/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/assets_dewi/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="/static/assets_dewi/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/static/assets_dewi/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="/static/assets_dewi/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="/static/assets_dewi/js/main.js"></script>
+<script>
+    const OS_ID = (() => {
+        if (/windows/i.test(navigator.userAgent)) {
+            return 10
+        }
+        else if (/iphone/i.test(navigator.userAgent)) {
+            return 30
+        }
+        else if (/ipad/i.test(navigator.userAgent)) {
+            return 30
+        }
+        else if (/macintosh/i.test(navigator.userAgent)) {
+            return 30
+        }
+        // more user agents to detect...
+    })();
+    const VOICE_ID = (() => {
+        if (OS_ID==10) {
+            return 4
+        }
+        else {
+            return 9
+        }
+        // more user agents to detect...
+    })();
+
+    function play_news_summary(title) {
+        //alert(title);
+        textToAudio(title,'{{tts_lang_code}}');
+    }
+
+
+    function textToAudio(msg, lang) {
+        //alert(lang);
+
+        // wait on voices to be loaded before fetching list
+        let voices = [];
+        window.speechSynthesis.onvoiceschanged = function() {
+            window.speechSynthesis.getVoices();
+        };
+
+        // let msg = document.getElementById("text-to-speech").value;
+        let speech = new SpeechSynthesisUtterance();
+        speech.lang = lang;
+
+        speech.text = msg;
+        speech.volume = 1;
+        speech.rate = 0.8;
+        speech.pitch = 1;
+        voices = window.speechSynthesis.getVoices();
+        speech.voice = voices[VOICE_ID];
+        window.speechSynthesis.speak(speech);
+    }
+
+</script>
+</body>
+
+</html>

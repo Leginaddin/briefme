@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Portfolio Details - Dewi Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="/static/assets_dewi/img/favicon.png" rel="icon">
+  <link href="/static/assets_dewi/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/static/assets_dewi/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/static/assets_dewi/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/assets_dewi/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/static/assets_dewi/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/static/assets_dewi/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/static/assets_dewi/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="/static/assets_dewi/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="/static/assets_dewi/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Dewi
+  * Updated: Jul 27 2023 with Bootstrap v5.3.1
+  * Template URL: https://bootstrapmade.com/dewi-free-multi-purpose-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="/">BriefMe</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="/static/assets_dewi/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="getstarted scrollto active" href="/">Back</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+    <section id="breadcrumbs" class="breadcrumbs"></section>
+    <!-- ======= Contact Section ======= -->
+    <section id="briefme" class="contact">
+      <div class="container" data-aos="fade-up">
+
+    <div class=" section-title">
+        <h2>BriefMe</h2>
+        <p>Fill the Form</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8 mt-4 mt-lg-0">
+          <form action="/generate_sum" method="post" class="php-email-form">
+            {{ form.hidden_tag() }}
+            <div class="form-group mt-3">
+              <select name="language">
+                <option value="ar">Arabic</option>
+                <option value="zh">Chinese</option>
+                <option value="nl">Dutch</option>
+                <option value="en">English</option>
+                <option value="fr">French</option>
+                <option value="de">German</option>
+                <option value="el">Greek</option>
+                <option value="he">Hebrew</option>
+                <option value="hi">Hindi</option>
+                <option value="it">Italian</option>
+                <option value="ja">Japanese</option>
+                <option value="ml">Malayalam</option>
+                <option value="mr">Marathi</option>
+                <option value="no">Norwegian</option>
+                <option value="pt">Portuguese</option>
+                <option value="ro">Romanian</option>
+                <option value="ru">Russian</option>
+                <option value="es">Spanish</option>
+                <option value="sv">Swedish</option>
+                <option value="ta">Tamil</option>
+                <option value="te">Telugu</option>
+                <option value="uk">Ukrainian</option>
+              </select>
+            </div>
+            <div class="form-group mt-3">
+              <select name="country">
+                <option value="au">Australia</option>
+                <option value="br">Brazil</option>
+                <option value="ca">Canada</option>
+                <option value="cn">China</option>
+                <option value="eg">Egypt</option>
+                <option value="fr">France</option>
+                <option value="de">Germany</option>
+                <option value="gr">Greece</option>
+                <option value="hk">Hong Kong</option>
+                <option value="in">India</option>
+                <option value="ie">Ireland</option>
+                <option value="il">Israel</option>
+                <option value="it">Italy</option>
+                <option value="jp">Japan</option>
+                <option value="nl">Netherlands</option>
+                <option value="no">Norway</option>
+                <option value="pk">Pakistan</option>
+                <option value="pe">Peru</option>
+                <option value="ph">Philippines</option>
+                <option value="pt">Portugal</option>
+                <option value="ro">Romania</option>
+                <option value="ru">Russian Federation</option>
+                <option value="sg">Singapore</option>
+                <option value="es">Spain</option>
+                <option value="se">Sweden</option>
+                <option value="ch">Switzerland</option>
+                <option value="tw">Taiwan</option>
+                <option value="ua">Ukraine</option>
+                <option value="gb">United Kingdom</option>
+                <option value="us">United States</option>
+              </select>
+            </div>
+            <p></p>
+            <p><b>Select your interests:</b></p>
+            <div class="form-check">
+              <input type="checkbox" name="interests" value="general">General
+              <input type="checkbox" name="interests" value="world">World
+              <input type="checkbox" name="interests" value="nation">Nation
+              <input type="checkbox" name="interests" value="business">Business
+              <input type="checkbox" name="interests" value="technology">Technology
+              <input type="checkbox" name="interests" value="entertainment">Entertainment
+              <input type="checkbox" name="interests" value="sports">Sports
+              <input type="checkbox" name="interests" value="science">Science
+              <input type="checkbox" name="interests" value="health">Health
+            </div>
+            <p></p>
+
+            <div class="text-center"><button type="submit" onclick="process_submit(this.form);">Generate</button></div>
+
+            <!--div class="my-3">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+            </div -->
+          </form>
+        </div>
+
+      </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="/static/assets_dewi/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="/static/assets_dewi/vendor/aos/aos.js"></script>
+  <script src="/static/assets_dewi/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/assets_dewi/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/static/assets_dewi/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/static/assets_dewi/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/static/assets_dewi/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="/static/assets_dewi/js/main.js"></script>
+
+<script>
+  function process_submit(my_form) {
+    my_form.submit();
+  }
+
+
+</script>
+</body>
+
+</html>
